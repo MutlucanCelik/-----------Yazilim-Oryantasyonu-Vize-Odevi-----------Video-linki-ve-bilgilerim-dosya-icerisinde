@@ -3,15 +3,228 @@
 Videonun linki : https://www.youtube.com/watch?v=usxwLPXm5hU
 
 
-1--> Kullanıcı tarafından girilen 5 adet sayıyı toplayan program
-2--> Kullanıcı tarafından girilen sayının karesini ve küpünü alan program
-3--> Kullanıcı tarafından girilen sayının faktöriyelini bulan program
-4--> Kullanıcı tarafından girilen 10 adet sayıyı tersten yazdıran program
-5--> Yıldızlar ile bir dik kenar solda olacak şekilde dik üçgen yapımı
-6--> Yıldızlar ile bir dik kenar sağda olacak şekilde dik üçgen yapımı
-7--> Kullanıcı tarafından girilen 10 adet sayının pozitif ve negatif adetlerini ve bu sayıları ekrana yazdıran program
-8--> Vücut kitle indeksi hesaplayan program
-9--> Vize ve final not hesaplayan program
-10--> Bankamatik uygulaması
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		/*
+		1--> Kullanıcı tarafından girilen 5 adet sayıyı toplayan program
+		2--> Kullanıcı tarafından girilen sayının karesini ve küpünü alan program
+		3--> Kullanıcı tarafından girilen sayının faktöriyelini bulan program
+		4--> Kullanıcı tarafından girilen 10 adet sayıyı tersten yazdıran program
+		5--> Yıldızlar ile bir dik kenar solda olacak şekilde dik üçgen yapımı
+		6--> Yıldızlar ile eşkenar üçgen yapımı
+		7--> Kullanıcı tarafından girilen 10 adet sayının pozitif ve negatif adetlerini ve bu sayıları ekrana yazdıran program
+		8--> Vücut kitle indeksi hesaplayan program
+		9--> Vize ve final not hesaplayan program
+		10--> Bankamatik uygulaması
+		*/
+		
+		
+		/*Algoritma 1--> Kullanıcı tarafından girilen 5 adet sayıyı toplayan program :
+		
+		int toplam = 0;
+		System.out.println("Lutfen 5 adet sayi girin :");
+		
+		for(int i=1;i<=5;i++) {
+			
+			int a = input.nextInt();
+			toplam += a;
+		}
+		System.out.println(toplam); */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 	2--> Kullanıcı tarafından girilen sayının karesini ve küpünü alan program : 
+		
+		System.out.print("Sayi girin :");
+		int a = input.nextInt();
+		
+		int kareAl = a*a;
+		int kupAl = a*a*a;
+		
+		System.out.println("Girmis oldugunuz "+ a +" sayisinin karesi : " + kareAl +
+				" kupu : " + kupAl); */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 3--> Kullanıcı tarafından girilen sayının faktöriyelini bulan program: 
+		
+		int faktoriyel = 1;
+		
+		System.out.print("Faktoriyelini almak istediginiz sayiyi girin : ");
+		int a = input.nextInt();
+		
+		for(int i=1;i<=a;i++) {
+			faktoriyel *= i;
+		}
+		System.out.println(faktoriyel); */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 4--> Kullanıcı tarafından girilen 10 adet sayıyı tersten yazdıran program :
+		
+		int [] dizi = new int[10];
+		System.out.println("10 adet sayi giriniz : ");
+		
+		for(int i=0;i<dizi.length;i++){
+			dizi[i] = input.nextInt();
+		
+		}
+		System.out.print("Girmis oldugunuz sayilar : ");
+		for(int i=0;i<dizi.length;i++) {
+			System.out.print(dizi[i] +" ");
+		}
+		System.out.print("\nGirilen sayilar tersi : ");
+		for(int i=dizi.length-1;i>=0;i--) {
+			System.out.print(dizi[i] + " "); 
+		}  */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 5--> Yıldızlar ile bir dik kenar solda olacak şekilde dik üçgen yapımı: 
+		 
+		for(int i=1;i<=5;i++){
+			
+			for(int j=1;j<=i;j++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}   */
+		
+		/*Algoritma 	6--> Yıldızlar ile eşkenar üçgen yapımı : 
+		
+		int a = 4;
+		int b = 1;
+		for(int i=1;i<=5;i++){
+			
+			for(int j=a;j>0;j--){
+				System.out.print(" ");
+			}
+			a--;
+			for(int k=1;k<=b;k++) {
+				System.out.print("*");
+			}
+			if(b<=9) {
+				b += 2;
+			}
+			
+			
+			System.out.println();
+		} */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 7--> Kullanıcı tarafından girilen 10 adet sayının pozitif ve negatif adetlerini ve bu sayıları ekrana yazdıran program : 
+		 
+		int pozitifAdet = 0;
+		int negatifAdet = 0;
+		int [] dizi = new int[10];
+		
+		System.out.println("Sayi girin :");
+		
+		for(int i=0;i<=9;i++) {
+			
+			dizi[i] = input.nextInt();
+			if(dizi[i]>0) {
+				pozitifAdet++;
+			}if(dizi[i]<0){
+				negatifAdet++;
+			}
+		}
+		
+		System.out.println("Girilen pozitif sayi adedi : " +pozitifAdet);
+		System.out.println("Girilen egatif sayi adedi : " +negatifAdet);
+		
+		System.out.print("Girilen pozitif sayilar : ");
+		for(int i=0;i<=dizi.length-1;i++){
+			if(dizi[i]>0){
+				System.out.print(dizi[i] +" ");
+			}
+		}
+		System.out.println();
+		System.out.print("Girilen negatif sayilar : ");
+		for(int i=0;i<=dizi.length-1;i++){
+			if(dizi[i]<0){
+				System.out.print(dizi[i] + " ");
+			}
+		} */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 	8--> Vücut kitle indeksi hesaplayan program : 
+		
+		int kilo = 85;
+		double boy = 1.73;
+		double vki = kilo / (boy*boy);
+		
+		System.out.println("Vucut kitle indeksiniz : " + vki); */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 	9--> Vize ve final not hesaplayan program: 
+		
+		int vize = 40;
+		int finall =100;
+		
+		double vizeNot = vize*0.4;
+		double finallNot = finall*0.6;
+		
+		double not = vizeNot + finallNot;
+		
+		System.out.println("Ortalamaniz : " + not); */
+		
+		//-----------------------------------------------------------------------------------
+		
+		/*Algoritma 10--> Bankamatik uygulaması : 
+		
+		int bakiye = 100;
+		
+		System.out.println("Firat bankamatige hosgeldiniz...");
+		System.out.println("Bakiyeniz : " +bakiye);
+		System.out.println("[1]-Para Cek\n[2]-Para Yatir\n[3]-Cikis");
+		System.out.print("Secim : ");
+		int secim = input.nextInt();
+		
+		
+		if(secim == 3){
+			System.out.println("Firat bankamatik iyi gunceler diler...");
+		}else if(secim == 1) {
+			System.out.print("Cekmek istediginiz miktari girin : ");
+			int miktar = input.nextInt();
+			if(miktar<0) {
+				System.out.println("Negarif bir miktar cekemezsiniz");
+			}else if(miktar>bakiye) {
+				System.out.println("Yetersiz bakiye");
+			}else if(miktar<=bakiye) {
+				bakiye -=miktar;
+				System.out.println(miktar +" TL Cektiniz");
+				System.out.println("Guncel bakiyeniz : " +bakiye);
+				System.out.println("Firat bankamatik iyi gunceler diler...");
+			}else {
+				System.out.println("Hatali giris");
+				
+			}
+		}else if(secim == 2) {
+			System.out.print("Yatirmak istediginiz miktari girin : ");
+			int miktar = input.nextInt();
+			if(miktar<0) {
+				System.out.println("Negarif bir miktar yatiramazsiniz");
+			}else if (miktar>0) {
+				bakiye += miktar;
+				System.out.println(miktar +" TL Yatirdiniz");
+				System.out.println("Guncel bakiyeniz : " +bakiye);
+				System.out.println("Firat bankamatik iyi gunceler diler...");
+			}
+		} */
+
+	}
+
+}
+
 
 
